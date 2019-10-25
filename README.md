@@ -14,14 +14,14 @@ A step-by-step guide to get the most of librAIry
 
 # Installation
 1. Clone this project
-```
-git clone https://github.com/librairy/demo.git
-```
-1. and run it with docker
-```
-docker-compose up
-```
-1. That's all!!  
+    ```
+    git clone https://github.com/librairy/demo.git
+    ```
+2. and run it with docker
+    ```
+    docker-compose up
+    ```
+3. That's all!!  
 
 # Services
 
