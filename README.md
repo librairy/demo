@@ -1,4 +1,3 @@
-<p align="center"><img width=15% src="https://www.dropbox.com/s/48zeo61kdrgiggl/librairy-logo655x654.png?raw=1"></p>
 <p align="center"><img width=40% src="https://github.com/librairy/demo/blob/master/logo.png"></p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -16,18 +15,18 @@ Only [Docker-Engine](https://docs.docker.com/install/) and [Docker-Compose](http
 # Installation
 1. Clone this project
 1. Run `docker-compose up`
-1. That's all!! The following resources will be available:
-   a) Corpus Browser:[http://localhost:8080](http://localhost:8080)
-   b) Restful API:[http://localhost:8081](http://localhost:8081)
-   c) Document Repository:[http://localhost:8983](http://localhost:8983) and dashboard [http://localhost:8983/solr/banana](http://localhost:8983/solr/banana)
+1. That's all!!  
+
+The following resources will be available:
+* Corpus Browser:[http://localhost:8080](http://localhost:8080
+* Restful API:[http://localhost:8081](http://localhost:8081)
+* Document Repository:[http://localhost:8983](http://localhost:8983) and dashboard [http://localhost:8983/solr/banana](http://localhost:8983/solr/banana)
 
 # Services
 
-### NLP Analyzer
+### NLP Analysis -> [tool](http://librairy.linkeddata.es/nlp)
 
 Efficient and easy way to analyze large amounts of multilingual texts through standard HTTP and TCP APIs.
-
-[http://librairy.linkeddata.es/nlp](http://librairy.linkeddata.es/nlp)
 
 Built on top of several NLP open-source tools it offers:
 - Part-of-Speech Tagger (and filter)
@@ -36,13 +35,15 @@ Built on top of several NLP open-source tools it offers:
 - Wikipedia Relations
 - Wordnet Synsets
 
-### Corpus Explorer
+### Corpus Exploration -> [dashboard](http://localhost:8983/solr/banana)
 
 Analyze document collections to discover the main hidden themes in their texts and create learning models that can be explored through HTTP Restful interfaces. These models can be used for large-scale document classification and information retrieval tasks.
 
 `librAIry` natively supports indexing structured documents in CSV or [JSONL](http://jsonlines.org/), even GZ compressed. PDF documents or any other format supported by the [Solr load interface](https://lucene.apache.org/solr/guide/8_2/uploading-data-with-index-handlers.html#uploading-data-with-index-handlers) are also supported.
 
-Let's index a documents subset of [JRC-Acquis](https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis) corpora. It is just a HTTP-POST request through the [http://localhost:8081/documents](http://localhost:8081) service with the following json (*default user:password is demo:2019*). Set your email account to be notified when all documents are indexed:
+Let's index a documents subset of [JRC-Acquis](https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis) corpora. It is just a HTTP-POST request through the [http://localhost:8081/documents](http://localhost:8081) service with the following json (*default user:password is demo:2019*).
+
+Set your email account to be notified when all documents are indexed:
 
 ```json
 {
@@ -106,9 +107,9 @@ Once the notification email has been received, a Docker container with the servi
 docker run -it --rm -p 8585:7777 <docker-account>/<model-name>
 ```
 
-### Documents Annotator
+### Thematic Annotations -> [api](http://localhost:8983/solr/banana)
 
-Documents should be previously annotated to be semantically related. Annotations are created from models created as before.
+Categorize texts with labels learned from them or from a different corpus. Our annotators are designed to generate annotations for each of the items inside big collections of textual documents, in a way that is computationally affordable and enables a semantic-aware exploration of the knowledge inside.
 
 Let's annotate the corpus with the [JRC-model](http://librairy.linkeddata.es/jrc-en-model) created from [Eurovoc](http://eurovoc.europa.eu/) categories. The following HTTP-POST request to [http://localhost:8081/annotations](http://localhost:8081) should be made:
 
@@ -138,8 +139,8 @@ Let's annotate the corpus with the [JRC-model](http://librairy.linkeddata.es/jrc
 
 Documents will be annotated from models in their respective languages. `librAIry` links documents across multi-lingual models.
 
-### Cross-lingual Similarity
+### Cross-lingual Similarity -> [Browser](http://localhost:8080)
 
 Texts are linked from their semantic similarity through cross-lingual labels and hierarchies of multi-lingual concepts. Documents from multi-language corpora are efficiently browsed and related without the need for translation. They are described by hash codes that preserve the notion of topics and group similar documents.
 
-Using [Corpus Browser](http://localhost:8080) a navigation through the corpora by semantically similar documents can be performed, regardless of language, filtering those that do not meet an specific criteria.
+Documents should be previously annotated to be semantically related. Using [Corpus Browser](http://localhost:8080), a navigation through the corpora by semantically similar documents can be performed, regardless of language, filtering those that do not meet an specific criteria.
