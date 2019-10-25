@@ -10,11 +10,17 @@
 A step-by-step guide to get the most of librAIry
 
 # Requirements
-Only [Docker-Engine](https://docs.docker.com/install/) and [Docker-Compose](https://docs.docker.com/compose/install/) are required.
+[Docker-Engine](https://docs.docker.com/install/) and [Docker-Compose](https://docs.docker.com/compose/install/) are required.
 
 # Installation
 1. Clone this project
-1. Run `docker-compose up`
+```
+git clone https://github.com/librairy/demo.git
+```
+1. Run it by docker-composed
+```
+docker-compose up
+```
 1. That's all!!  
 
 The following resources will be available:
@@ -24,7 +30,7 @@ The following resources will be available:
 
 # Services
 
-### NLP Analysis -> [tool](http://librairy.linkeddata.es/nlp)
+### NLP Analysis [ [tool](http://librairy.linkeddata.es/nlp) ]
 
 Efficient and easy way to analyze large amounts of multilingual texts through standard HTTP and TCP APIs.
 
@@ -35,15 +41,13 @@ Built on top of several NLP open-source tools it offers:
 - Wikipedia Relations
 - Wordnet Synsets
 
-### Corpus Exploration -> [dashboard](http://localhost:8983/solr/banana)
+### Corpus Exploration [ [dashboard](http://localhost:8983/solr/banana) ]
 
 Analyze document collections to discover the main hidden themes in their texts and create learning models that can be explored through HTTP Restful interfaces. These models can be used for large-scale document classification and information retrieval tasks.
 
-`librAIry` natively supports indexing structured documents in CSV or [JSONL](http://jsonlines.org/), even GZ compressed. PDF documents or any other format supported by the [Solr load interface](https://lucene.apache.org/solr/guide/8_2/uploading-data-with-index-handlers.html#uploading-data-with-index-handlers) are also supported.
+`librAIry` natively supports indexing structured documents in CSV or [JSONL](http://jsonlines.org/), even GZ compressed. PDF documents or any other format supported by the [Solr load interface](https://lucene.apache.org/solr/guide/8_2/uploading-data-with-index-handlers.html#uploading-data-with-index-handlers) are also accepted.
 
-Let's index a documents subset of [JRC-Acquis](https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis) corpora. It is just a HTTP-POST request through the [http://localhost:8081/documents](http://localhost:8081) service with the following json (*default user:password is demo:2019*).
-
-Set your email account to be notified when all documents are indexed:
+Let's index a documents subset of [JRC-Acquis](https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis) corpora. It is just a HTTP-POST request through the [/documents](http://localhost:8081) service (*default user:password is demo:2019*) with the following json (*Set your email account to be notified when all documents are indexed*):
 
 ```json
 {
@@ -68,10 +72,12 @@ Set your email account to be notified when all documents are indexed:
 }
 ```
 
-Statistics and some graphs about the corpus are be available in the [dashboard](http://localhost:8983/solr/banana).
+Statistics and some graphs about the corpus are available in the [dashboard](http://localhost:8983/solr/banana).
 
-Now, a probabilistic topic model wrapped by a HTTP-Restful API will be created from those documents, and published in DockerHub. The following HTTP-POST request is required by the
-[http://localhost:8081/topics](http://localhost:8081) service (*a DockerHub account is required*):
+Now, a probabilistic topic model wrapped by a HTTP-Restful API will be created from these documents, and published in DockerHub.
+
+The following HTTP-POST request is required by the
+[/topics](http://localhost:8081) service (*a DockerHub account is required*):
 ```json
 {
   "name": "my-first-model",
@@ -107,7 +113,7 @@ Once the notification email has been received, a Docker container with the servi
 docker run -it --rm -p 8585:7777 <docker-account>/<model-name>
 ```
 
-### Thematic Annotations -> [api](http://localhost:8983/solr/banana)
+### Thematic Annotations [ [api](http://localhost:8983/solr/banana) ]
 
 Categorize texts with labels learned from them or from a different corpus. Our annotators are designed to generate annotations for each of the items inside big collections of textual documents, in a way that is computationally affordable and enables a semantic-aware exploration of the knowledge inside.
 
@@ -139,7 +145,7 @@ Let's annotate the corpus with the [JRC-model](http://librairy.linkeddata.es/jrc
 
 Documents will be annotated from models in their respective languages. `librAIry` links documents across multi-lingual models.
 
-### Cross-lingual Similarity -> [Browser](http://localhost:8080)
+### Cross-lingual Similarity [ [Browser](http://localhost:8080) ]
 
 Texts are linked from their semantic similarity through cross-lingual labels and hierarchies of multi-lingual concepts. Documents from multi-language corpora are efficiently browsed and related without the need for translation. They are described by hash codes that preserve the notion of topics and group similar documents.
 
