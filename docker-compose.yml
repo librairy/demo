@@ -1,0 +1,25 @@
+version: '3'
+services:
+  solr:
+    image: librairy/solr:8.2
+    container_name: librairy-solr
+    ports:
+     - "8983:8983"
+    environment:
+      - SOLR_JAVA_MEM=-Xms256m -Xmx256m
+  api:
+    image: librairy/api:2.1.16
+    container_name: librairy-api
+    ports:
+      - "8081:7777"
+    volumes:
+      - ./input:/librairy/input
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - LIBRAIRY_API_USERS=demo:2019
+      - JAVA_OPTS=-Xmx512m
+  explorer:
+    image: librairy/explorer:0.2
+    container_name: librairy-explorer
+    ports:
+      - "8080:80"
