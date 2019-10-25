@@ -23,11 +23,6 @@ docker-compose up
 ```
 1. That's all!!  
 
-The following resources will be available:
-* Corpus Browser:[http://localhost:8080](http://localhost:8080
-* Restful API:[http://localhost:8081](http://localhost:8081)
-* Document Repository:[http://localhost:8983](http://localhost:8983) and dashboard [http://localhost:8983/solr/banana](http://localhost:8983/solr/banana)
-
 # Services
 
 ### NLP Analysis [ [tool](http://librairy.linkeddata.es/nlp) ]
