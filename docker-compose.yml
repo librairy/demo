@@ -8,7 +8,7 @@ services:
     environment:
       - SOLR_JAVA_MEM=-Xms256m -Xmx256m
   api:
-    image: librairy/api:2.1.16
+    image: librairy/api:2.1.18
     container_name: librairy-api
     ports:
       - "8081:7777"
@@ -16,6 +16,7 @@ services:
       - ./input:/librairy/input
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
+      - NLP_ENDPOINT=http://librairy.linkeddata.es/nlp
       - LIBRAIRY_API_USERS=demo:2019
       - JAVA_OPTS=-Xmx512m
   explorer:
