@@ -87,7 +87,7 @@ The following HTTP-POST request is required by the
   },
   "parameters": {
     "topics": "20",
-    "stopwords" : "article commission council union annex official"
+    "stopwords" : "article commission council union annex official regulation european decision"
   },
   "dataSource": {
     "dataFields": {
@@ -108,7 +108,7 @@ Once the notification email has been received, a Docker container with the servi
 docker run -it --rm -p 8585:7777 <docker-account>/<model-name>
 ```
 
-### Thematic Annotations [ [api](http://localhost:8983/solr/banana) ]
+### Thematic Annotations [ [service](http://localhost:8983/solr/banana) ]
 
 Categorize texts with labels learned from them or from a different corpus. Our annotators are designed to generate annotations for each of the items inside big collections of textual documents, in a way that is computationally affordable and enables a semantic-aware exploration of the knowledge inside.
 
@@ -140,7 +140,7 @@ Let's annotate the corpus with the [JRC-model](http://librairy.linkeddata.es/jrc
 
 Documents will be annotated from models in their respective languages. `librAIry` links documents across multi-lingual models.
 
-### Cross-lingual Similarity [ [Browser](http://localhost:8080) ]
+### Cross-lingual Similarity [ [browser](http://localhost:8080) ]
 
 Texts are linked from their semantic similarity through cross-lingual labels and hierarchies of multi-lingual concepts. Documents from multi-language corpora are efficiently browsed and related without the need for translation. They are described by hash codes that preserve the notion of topics and group similar documents.
 
