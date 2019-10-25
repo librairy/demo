@@ -17,7 +17,7 @@ A step-by-step guide to get the most of librAIry
 ```
 git clone https://github.com/librairy/demo.git
 ```
-1. Run it by docker-composed
+1. and run it with docker
 ```
 docker-compose up
 ```
