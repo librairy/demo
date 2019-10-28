@@ -108,7 +108,7 @@ Once the notification email has been received, a Docker container with the servi
 docker run -it --rm -p 8585:7777 <docker-account>/<model-name>
 ```
 
-### Thematic Annotations [ [service](http://localhost:8983/solr/banana) ]
+### Thematic Annotations [ [service](http://localhost:8081) ]
 
 Categorize texts with labels learned from them or from a different corpus. Our annotators are designed to generate annotations for each of the items inside big collections of textual documents, in a way that is computationally affordable and enables a semantic-aware exploration of the knowledge inside.
 
