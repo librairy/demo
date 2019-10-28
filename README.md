@@ -78,7 +78,7 @@ The following HTTP-POST request is required by the
   "name": "my-first-model",
   "description": "Collection of legislative texts (EN) from the European Union generated between years 1958 and 2006",
   "contactEmail": "<your@email.com>",
-  "version": "1.0",
+  "version": "<model-version>",
   "docker": {
     "email": "<dockerHub-account>",
     "password": "<dockerHub-password>",
@@ -86,8 +86,7 @@ The following HTTP-POST request is required by the
     "user": "<dockerHub-username>"
   },
   "parameters": {
-    "topics": "20",
-    "stopwords" : "article commission council union annex official regulation european decision"
+    "topics": "20"
   },
   "dataSource": {
     "dataFields": {
@@ -105,7 +104,7 @@ The following HTTP-POST request is required by the
 
 Once the notification email has been received, a Docker container with the service publishing the topics discovered in the corpus will be available in DockerHub, and it can be started using:
 ```ssh
-docker run -it --rm -p 8585:7777 <docker-account>/<model-name>
+docker run -it --rm -p 8585:7777 <docker-account>/<model-name>:<model-version>
 ```
 
 ### Thematic Annotations [ [service](http://localhost:8081) ]
