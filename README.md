@@ -17,11 +17,14 @@ A step-by-step guide to get the most of librAIry
     ```
     git clone https://github.com/librairy/demo.git
     ```
-2. and run it with docker
+2. download the docker images by
+    ```
+    docker-compose pull
+    ```
+3. and run it!
     ```
     docker-compose up
     ```
-3. That's all!!  
 
 # Services
 
