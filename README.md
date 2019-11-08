@@ -3,7 +3,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Docker-Engine](https://img.shields.io/badge/docker_engine-v19+-blue.svg)
 ![Docker-Compse](https://img.shields.io/badge/docker_compose-v3.0+-blue.svg)
-[![Release Status](https://jitci.com/gh/librairy/demo/svg)](https://jitci.com/gh/librairy/demo)
+[![Release Status](https://jitpack.io/v/librairy/demo.svg)](https://jitpack.io/#librairy/demo)
 [![GitHub Issues](https://img.shields.io/github/issues/librairy/demo.svg)](https://github.com/librairy/demo/issues)
 [![License](https://img.shields.io/badge/license-Apache2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
