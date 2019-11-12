@@ -8,7 +8,7 @@ services:
     environment:
       - SOLR_JAVA_MEM=-Xms256m -Xmx256m
   api:
-    image: librairy/api:2.1.24
+    image: librairy/api:latest
     container_name: librairy-api
     ports:
       - "8081:7777"
@@ -20,7 +20,7 @@ services:
       - LIBRAIRY_API_USERS=demo:2019
       - JAVA_OPTS=-Xmx512m
   explorer:
-    image: librairy/explorer:0.3
+    image: librairy/explorer:latest
     container_name: librairy-explorer
     ports:
       - "8080:80"
