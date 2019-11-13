@@ -1,21 +1,9 @@
 version: '3'
 services:
-  jrc-es:
-    image: cbadenes/topic-model-es
-    container_name: jrc-es
+  model-en:
+    image: librairy/demo-model-en
+    container_name: model-en
     ports: [7777:7777]
-    networks:
-      - demo_net
-  jrc-en:
-    image: cbadenes/topic-model-en
-    container_name: jrc-en
-    ports: [7778:7777]
-    networks:
-      - demo_net
-  jrc-fr:
-    image: cbadenes/topic-model-fr
-    container_name: jrc-fr
-    ports: [7778:7777]
     networks:
       - demo_net
 networks:

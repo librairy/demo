@@ -11,11 +11,11 @@
       "name": "name_s",
       "text": ["txt_t"]
     },
-    "filter": "source_s:jrc && lang_s:fr",
+    "filter": "source_s:jrc && lang_s:es",
     "format": "SOLR_CORE",
     "offset": 0,
     "size": -1,
     "url": "http://repo:8983/solr/documents"
   },
-  "modelEndpoint": "http://jrc-fr:7777"
+  "modelEndpoint": "http://model-es:7777"
 }

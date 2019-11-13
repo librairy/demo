@@ -6,7 +6,7 @@
   "docker": {
     "email": "cbadenes@gmail.com",
     "password": "secret",
-    "repository": "cbadenes/topic-model-fr",
+    "repository": "librairy/demo-model-fr",
     "user": "cbadenes"
   },
   "parameters": {
