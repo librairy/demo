@@ -5,7 +5,7 @@
   "version": "latest",
   "docker": {
     "email": "cbadenes@gmail.com",
-    "password": "docker2018",
+    "password": "secret",
     "repository": "cbadenes/topic-model-en",
     "user": "cbadenes"
   },
