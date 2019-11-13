@@ -1,0 +1,26 @@
+{
+  "name": "topic-model",
+  "description": "Collection of legislative texts (FR) from the European Union generated between years 1958 and 2006",
+  "contactEmail": "<your@email.com>",
+  "version": "latest",
+  "docker": {
+    "email": "cbadenes@gmail.com",
+    "password": "docker2018",
+    "repository": "cbadenes/topic-model-fr",
+    "user": "cbadenes"
+  },
+  "parameters": {
+  },
+  "dataSource": {
+    "dataFields": {
+      "id": "id",
+      "text": ["txt_t"],
+      "labels": ["labels_t"]
+    },
+    "filter":"source_s:jrc && lang_s:fr",
+    "format": "SOLR_CORE",
+    "offset": 0,
+    "size": -1,
+    "url": "http://repo:8983/solr/documents"
+  }
+}
