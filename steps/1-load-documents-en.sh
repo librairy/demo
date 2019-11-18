@@ -1,1 +1,1 @@
-curl --user "demo:2019" -X POST -H "Content-Type: application/json" -d @../json/load-en-documents.json http://localhost:8081/documents
+curl --user "demo:2019" -X POST -H "Content-Type: application/json" -d @json/load-en-documents.json http://localhost:8081/documents

@@ -1,1 +1,1 @@
-curl --user "demo:2019" -X POST -H "Content-Type: application/json" -d @../json/annotate-en.json http://localhost:8081/annotations
+curl --user "demo:2019" -X POST -H "Content-Type: application/json" -d @json/annotate-en.json http://localhost:8081/annotations
