@@ -1,7 +1,7 @@
 version: '3'
 services:
   model-en:
-    image: librairy/demo-model-en
+    image: <USER-NAME>/demo-model-en
     container_name: model-en
     ports: [7777:7777]
     networks:

@@ -1,13 +1,13 @@
 {
   "name": "topic-model",
   "description": "Collection of legislative texts (EN) from the European Union generated between years 1958 and 2006",
-  "contactEmail": "<user-email>",
+  "contactEmail": "<USER-EMAIL>",
   "version": "latest",
   "docker": {
-    "email": "<user-email>",
-    "password": "<user-password>",
-    "repository": "<user-name>/demo-model-en",
-    "user": "<user-name>"
+    "email": "<USER-EMAIL>",
+    "password": "<USER-PASSWORD>",
+    "repository": "<USER-NAME>/demo-model-en",
+    "user": "<USER-NAME>"
   },
   "dataSource": {
     "dataFields": {
@@ -18,7 +18,7 @@
     "filter":"source_s:jrc && lang_s:en",
     "format": "SOLR_CORE",
     "offset": 0,
-    "size": 50,
+    "size": -1,
     "url": "http://repo:8983/solr/documents"
   }
 }
