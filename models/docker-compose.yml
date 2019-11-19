@@ -7,13 +7,13 @@ services:
     networks:
       - demo_net
 #  model-es:
-#    image: <user-name>/demo-model-es
+#    image: <USER-NAME>/demo-model-es
 #    container_name: model-es
 #    ports: [7778:7777]
 #    networks:
 #      - demo_net
 #  model-fr:
-#    image: librairy/demo-model-fr
+#    image: <USER-NAME>/demo-model-fr
 #    container_name: model-fr
 #    ports: [7779:7777]
 #    networks:
