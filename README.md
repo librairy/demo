@@ -62,8 +62,9 @@ Let's index a documents subset of [JRC-Acquis](https://ec.europa.eu/jrc/en/langu
     "name":"jrc",
     "dataFields": {
       "id": "0",
-      "name": "1",      
-      "text": ["2"]
+      "name": "1",
+      "labels":["2"],      
+      "text": ["3"]
     },
     "filter":",",
     "format": "CSV",
