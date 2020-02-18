@@ -56,7 +56,7 @@ Let's index a documents subset of [JRC-Acquis](https://ec.europa.eu/jrc/en/langu
   "contactEmail": "<your@email.com>",
   "dataSink": {
     "format": "SOLR_CORE",
-    "url": "http://solr:8983/solr/documents"
+    "url": "http://librairy-repo:8983/solr/documents"
   },
   "dataSource": {
     "name":"jrc",
@@ -69,7 +69,7 @@ Let's index a documents subset of [JRC-Acquis](https://ec.europa.eu/jrc/en/langu
     "format": "CSV",
     "offset": 1,
     "size": -1,
-    "url": "https://raw.githubusercontent.com/librairy/demo/master/data/jrc-en.csv"
+    "url": "https://raw.githubusercontent.com/librairy/demo/master/batch/jrc-en.csv"
   }
 }
 ```
@@ -104,7 +104,7 @@ The following HTTP-POST request is required by the
     "format": "SOLR_CORE",
     "offset": 0,
     "size": -1,
-    "url": "http://solr:8983/solr/documents"
+    "url": "http://librairy-repo:8983/solr/documents"
   }
 }
 ```
@@ -125,7 +125,7 @@ Let's annotate the corpus with the [JRC-model](http://librairy.linkeddata.es/jrc
   "contactEmail": "<your@email.com>",
   "dataSink": {
     "format": "SOLR_CORE",
-    "url": "http://solr:8983/solr/documents"
+    "url": "http://librairy-repo:8983/solr/documents"
   },
   "dataSource": {
     "name":"jrc",
@@ -138,7 +138,7 @@ Let's annotate the corpus with the [JRC-model](http://librairy.linkeddata.es/jrc
     "format": "SOLR_CORE",
     "offset": 0,
     "size": -1,
-    "url": "http://solr:8983/solr/documents"
+    "url": "http://librairy-repo:8983/solr/documents"
   },
   "modelEndpoint": "http://librairy.linkeddata.es/jrc-en-model"
 }
