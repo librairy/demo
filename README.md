@@ -97,6 +97,7 @@ The following HTTP-POST request is required by the
     "topics": "20"
   },
   "dataSource": {
+    "name":"jrc",
     "dataFields": {
       "id": "id",
       "text": ["txt_t"]
