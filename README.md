@@ -70,7 +70,7 @@ Let's index a documents subset of [JRC-Acquis](https://ec.europa.eu/jrc/en/langu
     "format": "CSV",
     "offset": 1,
     "size": -1,
-    "url": "https://raw.githubusercontent.com/librairy/demo/master/batch/jrc-en.csv"
+    "url": "/librairy/batch/jrc-en.csv"
   }
 }
 ```
